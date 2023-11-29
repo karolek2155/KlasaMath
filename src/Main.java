@@ -3,38 +3,11 @@ import static java.lang.Math.*;
 public class Main {
     public static void main(String[] args) {
 
-// 1 str z klawiatury, przenies 2 ostatnie znaki na przod, pod warunkiem, ze tych znakow jest na tyle co najmniej 3, jesli nie - zostawisz bez
-
-/*        Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj ciąg znaków o długości co najmniej 3 :");
-        String str = scanner.nextLine();
-
-        int lengthStr = str.length();
-        if (str.length() > 2) {
-            String last2Chars = str.substring(lengthStr-2, lengthStr);
-            String chars = str.substring(0, lengthStr-2);
-            String newStr = last2Chars + chars;
-            System.out.println(newStr);
-        }
-        else{
-            System.out.println("Podaj ciąg znaków o długości co najmniej 3");
-        }
-
-        System.out.println("Podaj ciąg znaków :");
-        String str2 = scanner.nextLine();
-        System.out.println("Podaj dowolny indeks ciągu znaków :");
-        int indexStr2 = scanner.nextInt();
-
-        if (indexStr2 + 4 <= str2.length()) {
-            String newStr2 = str2.substring(indexStr2, indexStr2+4);
-            System.out.println(newStr2);
-        }
-       */
 
 //        double result = Math.pow(5,2);
 //        System.out.println(result);
 
-        /*Scanner scann = new Scanner(System.in);
+        Scanner scann = new Scanner(System.in);
         System.out.println("Podaj kolejno a, b, c trójmianu kwadratowego");
         double a = scann.nextDouble();
         double b = scann.nextDouble();
@@ -55,9 +28,9 @@ public class Main {
                 System.out.printf("Równanie kwadratowe ma jeden pierwiastek %.2f\n", x0);
             } else System.out.println("Równanie nie ma pierwiastków");
         }
-*/
 
-/*        double[] tabDouble = new double[20];
+
+        double[] tabDouble = new double[20];
 
         for (int i = 0; i < tabDouble.length; i++){
             tabDouble[i] = random() * 40 + 30;
@@ -72,7 +45,35 @@ public class Main {
             tabInt[i] = (int) (random() * 40 + 30);
             System.out.print(tabInt[i] + " ");
         }
-        */
+
+
+
+//        random() * num(zakres) 0-1 double
+
+        int size = 10;
+        double[] doubleArr = new double[size];
+        for (int i = 0; i < size; i++) {
+            doubleArr[i] = random() * 100;
+            System.out.print(doubleArr[i] + ", ");
+        }
+        System.out.println();
+
+//        zakres 200 - 500 w int
+
+        int[] arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int)(random() * 300 + 200);
+            System.out.print(arr[i] + ", ");
+        }
+
+//        dwa miejsca po przecinku
+
+        double[] arr1 = new double[10];
+        for (int i = 0; i < arr1.length; i++) {
+            arr1[i] = (int) (random() * 30000 + 20000);
+            arr1[i] = arr1[i]/100;
+            System.out.print(arr1[i] + ", ");
+        }
 
     }
 }
